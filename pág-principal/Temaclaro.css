@@ -1,0 +1,152 @@
+* {
+    font-family: "Exo 2";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body.claro {
+    background-color: rgb(255, 255, 255); /* Fundo claro */
+    color: rgb(0, 0, 0); /* Texto escuro */
+}
+
+/* Cabeçalho */
+.claro .headerp {
+    background-color: rgb(240, 240, 240); /* Fundo do cabeçalho claro */
+    color: rgb(0, 0, 0); /* Texto escuro */
+}
+
+.claro .logop {
+    margin-top: 10px;
+    width: 40px;
+    margin-left: 30px;
+}
+
+/* Barra de pesquisa */
+.claro .search-box {
+    position: relative;
+    margin-top: 15px;
+    width: 550px;
+}
+
+.claro .search-box>i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(51, 51, 51); /* Ícone escuro */
+}
+
+.claro .pes {
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255); /* Fundo claro */
+    padding: 15px;
+    padding-left: 40px;
+    border-radius: 30px;
+    color: rgb(0, 0, 0); /* Texto escuro */
+    width: 500px;
+    font-size: 15px;
+    border: 2px solid rgb(200, 200, 200);
+}
+
+.claro .pes:hover {
+    background-color: rgb(245, 245, 245); /* Fundo claro ao passar o mouse */
+}
+
+.claro .pes:focus {
+    border: 2px solid rgb(48, 138, 255); /* Borda azul ao focar */
+}
+
+.claro .pes:active {
+    background-color: rgb(230, 230, 230); /* Fundo claro ao clicar */
+}
+
+/* Menu */
+.claro .containericoneh {
+    display: flex;
+    justify-content: space-between;
+    width: 85px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.claro #icone-perfil {
+    font-size: 16px;
+    color: rgb(0, 0, 0); /* Ícone escuro */
+}
+
+.claro .box-icone-p,
+.claro .box-icone-m {
+    background-color: transparent; /* Fundo transparente */
+    color: rgb(0, 0, 0); /* Ícone escuro */
+}
+
+.claro .box-icone-p:hover,
+.claro .box-icone-m:hover {
+    background-color: rgb(220, 220, 220); /* Fundo claro ao passar o mouse */
+}
+
+.claro .box-icone-p:focus,
+.claro .box-icone-m:focus {
+    background-color: rgb(210, 210, 210); /* Fundo claro ao focar */
+}
+
+.claro .box-icone-p:active,
+.claro .box-icone-m:active {
+    background-color: rgb(200, 200, 200); /* Fundo claro ao clicar */
+}
+
+/* Botões do menu */
+.claro .button-menu {
+    text-align: left;
+    color: rgb(0, 0, 0); /* Texto escuro */
+    font-size: 15px;
+    background-color: rgb(240, 240, 240); /* Fundo claro */
+}
+
+.claro .button-menu:hover {
+    background-color: rgb(230, 230, 230); /* Fundo claro ao passar o mouse */
+}
+
+/* Configurações */
+.claro .Configurações {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    z-index: 100;
+    background-color: rgb(240, 240, 240); /* Fundo claro */
+    color: rgb(0, 0, 0); /* Texto escuro */
+    border-radius: 10px; 
+}
+
+/* Botões gerais */
+.claro .button {
+    background-color: rgba(200, 200, 200, 0.5); /* Fundo claro */
+    color: rgb(0, 0, 0); /* Texto escuro */
+}
+
+/* Conteúdo dos boxes */
+.claro .box-left,
+.claro .box-right,
+.claro .header-box-left,
+.claro .box-rolável {
+    background-color: rgb(245, 245, 245); /* Fundo claro */
+    color: rgb(0, 0, 0); /* Texto escuro */
+}
+
+/* Links */
+.claro .link-bibli {
+    color: rgb(51, 51, 51); /* Texto escuro */
+}
+
+.claro .link-bibli:hover {
+    color: rgb(0, 0, 0); /* Texto mais escuro ao passar o mouse */
+}
+
+/* Textos específicos */
+.claro .name-music,
+.claro .nomeartista {
+    color: rgb(0, 0, 0); /* Texto escuro */
+}

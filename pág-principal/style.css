@@ -1,0 +1,755 @@
+    * {
+        font-family: "Exo 2";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(10, 10, 10);
+    }
+
+    .headerp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(10, 10, 10);
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .logop {
+        margin-top: 10px;
+        width: 40px;
+        margin-left: 30px;
+    }
+
+
+    /*------------barra de pesquisa-------------*/
+    .search-box {
+        position: relative;
+        margin-top: 15px;
+        width: 550px;
+    }
+
+    .search-box>i {
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+    }
+
+    .pes {
+        border: none;
+        outline: none;
+        background-color: rgb(25, 25, 25);
+        padding: 15px;
+        padding-left: 40px;
+        border-radius: 30px;
+        color: rgb(255, 255, 255);
+        width: 500px;
+        font-size: 15px;
+        border: 2px solid transparent;
+        transition: background-color 0.3s ease
+    }
+
+    .pes:hover {
+        background-color: rgb(36, 36, 36);
+    }
+
+    .pes:focus {
+        border: 2px solid rgb(48, 138, 255);
+        transition: 0.3s ease;
+    }
+
+    .pes:active {
+        background-color: rgb(30, 30, 30);
+    }
+
+    /*------------barra de pesquisa-------------*/
+
+
+    /*-------------------menu--------------------*/
+    
+    .box-icone-m {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        min-width: 45px;
+        min-height: 45px;
+        cursor: pointer;
+        margin-right: 30px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-icone-m:hover {
+        background-color: rgb(40, 40, 40);
+    }
+
+    .box-icone-m:focus {
+        background-color: rgb(59, 59, 59);
+        transition: 0.3s ease;
+    }
+
+    .box-icone-m:active {
+        background-color: rgb(40, 40, 40);
+        transform: scale(0.95);
+    }
+
+    #icone-menu {
+        color: rgb(167, 167, 167);
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .box-menu {
+        margin-top: 70px;
+        display: none;
+        float: right;
+        background-color: rgb(5, 5, 5);
+        margin-right: 50px;
+        border-radius: 8px;
+        padding: 8px;
+        height: auto;
+        width: 250px;
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+        position: relative;
+        z-index: 2;
+    }
+
+
+    .button-menu {
+        text-align: left;
+        color: rgb(167, 167, 167);
+        font-size: 15px;
+        background-color: rgb(5, 5, 5);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        padding: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button-menu:hover {
+        background-color: rgb(20, 20, 20);
+    }
+
+    #icone-inicio {
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    #icone-perfil {
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    #icone-bibli {
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    #icone-conf {
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    .Configurações {
+        position: relative;
+        top: 50px;
+        margin: 0 auto;
+        z-index: 100;
+        background-color: rgb(5, 5, 5);
+        border-radius: 10px;
+        padding: 20px;
+        width: 600px;
+        height: 500px;
+        display: none;
+        color: white;
+    }
+
+    /* From Uiverse.io by javierBarroso */
+    .button {
+        position: relative;
+        width: 4em;
+        height: 4em;
+        border: none;
+        background: rgba(180, 83, 107, 0.11);
+        border-radius: 5px;
+        transition: background 0.5s;
+        float: right;
+    }
+
+    .X {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2em;
+        height: 1.5px;
+        background-color: rgb(255, 255, 255);
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    .Y {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2em;
+        height: 1.5px;
+        background-color: #fff;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+
+    .button:hover {
+        background-color: rgb(211, 21, 21);
+    }
+
+    .button:active {
+        background-color: rgb(130, 0, 0);
+    }
+
+    .button:hover>.close {
+        animation: close 0.2s forwards 0.25s;
+    }
+
+    @keyframes close {
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /*-------------------menu--------------------*/
+
+
+    .containercont {
+        display: flex;
+        position: fixed;
+        top: 80px;
+        width: 100%;
+        bottom: 10px;
+        transition: margin-bottom 0.3s ease;
+    }
+
+    .box-left {
+        margin-right: 5px;
+        margin-left: 10px;
+        background-color: rgb(20, 20, 20);
+        border-radius: 10px;
+        min-width: 300px;
+        max-width: 450px;
+        height: auto;
+    }
+
+    .box-right {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 100%;
+        background-color: rgb(20, 20, 20);
+        border-radius: 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .separator {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        width: 2px;  
+        height: auto;
+        cursor: grab;
+        transition: background-color  0.3s ease;
+        border-radius: 5px;
+    }
+    
+    .separator:hover {
+        background-color: #797979;
+    }
+
+    .separator:active {
+        cursor: grabbing;
+        background-color: #dbdbdb;
+    }
+
+
+    /*-------------conteúdo do box left---------------*/
+
+    .header-box-left {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        position: sticky;
+        background-color: rgb(20, 20, 20);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 80px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.363);
+    }
+
+    .box-rolável {
+        height: 180px;
+        background-color: rgb(20, 20, 20);
+        overflow: auto;
+        padding: 10px;
+    }
+
+    .link-bibli {
+        color: rgb(206, 206, 206);
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: 10px;
+        font-size: 25px;
+    }
+
+    .link-bibli:hover {
+        color: rgb(231, 231, 231);
+    }
+
+    .link-bibli:active {
+        color: rgb(180, 180, 180);
+        transform: scale(0.95);
+        transition: 0.3s ease;
+    }
+
+    .icone-Bibli:hover {
+        transform: scale(0.95);
+    }
+
+    .boxbtnrol{
+        width: 100%;
+        height: 140px;
+        background-color: #292929;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .p1{
+        color: white;
+        font-size: 17px;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .p2{
+        color: white;
+        font-size: 15px;
+    }
+    
+    .buttonrol{
+        padding: 8px 15px; 
+        margin-top: 30px;
+        background-color: #fff;     
+        border: none;
+        border-radius: 50px;
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .buttonrol:hover{
+        transform: scale(1.05);
+    }
+
+    .buttonrol:active{
+        transform: scale(0.99);
+    }
+
+    .inputsugestao{
+       outline: none;
+       border: 2px solid transparent;
+       border-radius: 50px;
+       padding: 8px 15px;
+       background-color: #494949;
+       caret-color: white;
+       margin-right: 2px;
+       transition: background-color 0.3s ease;
+       width: 130px;
+       color: white;
+    }
+
+    .inputsugestao:focus {
+        border: 2px solid rgb(48, 138, 255);
+    }
+
+    .inputsugestao:hover{
+        background-color: #797979;
+    }
+
+    input[type="text"]::-webkit-input-placeholder{
+        color: white;
+    }
+
+
+    /*---------------conteúdo do box left-------------*/
+
+
+
+    /*--------------conteúdo do box right-------------*/
+    .name-music {
+        margin-top: 10px;
+        color: white;
+        font-size: 17px;
+        align-self: flex-start;
+    }
+
+    .name-artista {
+        margin-top: 4px;
+        color: rgb(151, 151, 151);
+        font-size: 15px;
+        align-self: flex-start;
+    }
+
+    .name-artista-a {
+        margin-top: 10px;
+        font-size: 15px;
+        color: white;
+    }
+
+    .nomeartista {
+        margin-top: 5px;
+        color: rgb(151, 151, 151);
+        font-size: 15px;
+    }
+
+    .carrossel {
+        display: flex;
+        width: 100%;
+        height: 300px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+
+    .artistas {
+        border-radius: 10px;
+        min-width: 235px;
+        height: 100%;
+        padding: 10px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: background-color  0.3s ease;
+    }
+
+    .artistas:hover {
+        background-color: rgba(43, 43, 43, 0.473);
+    }
+
+    .img-artistas {
+        width: 215px;
+        height: 215px;
+        border-radius: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .box-music {
+        border-radius: 10px;
+        min-width: 235px;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-music:hover {
+        background-color: rgba(43, 43, 43, 0.473);
+    }
+
+    .box-music:active {
+        background-color: rgba(63, 63, 63, 0.473);
+    }
+
+    .h2-carro {
+        color: white;
+        font-size: 30px;
+        margin-bottom:2px;
+        margin-top: 20px;
+        margin-left: 28px;
+    }
+
+    .capa {
+        width: 215px;
+        height: 215px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .button-absolute {
+        position: relative;
+        height: 360px;
+    }
+
+    .box-seta {
+        margin-top: 125px;
+        margin-left: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .button-absolute:hover .box-seta {
+        opacity: 1;
+    }
+
+    .move-right-button,
+    .move-left-button {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        border: none;
+        cursor: pointer;
+        background-color: rgba(78, 78, 78, 0.795);
+        color: rgb(253, 253, 253);
+        margin-right: 10px;
+        margin-left: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .move-right-button:hover,
+    .move-left-button:hover {
+        background-color: rgba(107, 107, 107, 0.822);
+    }
+
+    .play {
+        bottom: 100px;
+        left: 70px;
+        position: relative;
+        min-height: 55px;
+        min-width: 55px;
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+        background-color: rgb(48, 138, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        opacity: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.404);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .play:hover {
+        background-color: rgb(104, 160, 255);
+    }
+
+    .box-music:hover .play {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        animation: moverplay 0.3s ease forwards;
+    }
+
+    @keyframes moverplay {
+        100% {
+            transform: translatey(-15px);
+        }
+    }
+
+    .boxplayer {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(10, 10, 10);
+        width: 100%;
+        height: 80px;
+        animation: moverplayer 0.3s forwards;
+    }
+
+    .boxplayer .open{
+        display: flex;
+    }
+
+    @keyframes moverplayer {
+        to {
+            transform: translateY(0);
+        }
+
+        from {
+            transform: translateY(100%);
+        }
+    }
+
+    .closeplayer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: none;
+        transition: background 0.5s;
+        float: right;
+        border-radius: 5px;
+    }
+
+    .closeplayer i {
+        font-size: 20px;
+        color: white;
+    }
+
+
+    .closeplayer:hover {
+        background-color: rgb(87, 87, 87);
+    }
+
+    .closeplayer:active {
+        background-color: rgb(102, 102, 102);
+    }
+
+    .closeplayer:hover>.close {
+        animation: close 0.2s forwards 0.25s;
+    }
+
+    @keyframes close {
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .openplayer{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        transition: background 0.5s;
+        float: right;
+        border-radius: 5px;
+    }
+
+    .openplayer i {
+        font-size: 20px;
+        color: white;
+    }
+
+
+    .openplayer:hover {
+        background-color: rgb(87, 87, 87);
+    }
+
+    .openplayer:active {
+        background-color: rgb(102, 102, 102);
+    }
+
+    .closeplayer:hover>.open {
+        animation: close 0.2s forwards 0.25s;
+    }
+
+    @keyframes open {
+        100% {
+            opacity: 1;
+        }
+    }
+
+    audio {
+        width: 500px;
+        margin-bottom: 10px;
+    }
+
+    audio::-webkit-media-controls-panel {
+        background-color: rgb(103, 169, 255);
+        /* Cor de fundo do painel */
+    }
+
+    .box-artistas{
+            position: absolute;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+            margin-left: 2px;
+            margin-right: 10px;
+            width: 100%;
+            background-color: rgb(20, 20, 20);
+            border-radius: 10px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100px;
+    }
+    
+
+
+
+    /*--------------conteúdo do box right-------------*/
+
+
+    /* Estilo da barra de rolagem para navegadores WebKit (Chrome, Edge, Safari) */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(48, 138, 255);
+        border-radius: 20px;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(105, 170, 255);
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: rgb(152, 197, 255);
+    }
+
+
+    .carrossel::-webkit-scrollbar-thumb {
+        background-color: rgb(48, 138, 255);
+        border-radius: 0;
+        border-left: 20px solid rgb(20, 20, 20);
+        border-right: 20px solid rgb(20, 20, 20);
+    }
+
+    .carrossel::-webkit-scrollbar {
+        display: none;
+    }
+
+
+
+/* Estilos para telas pequenas (até 600px - Celulares) */
+@media (max-width: 600px) {
+    /*faltou tempo*/
+}
+
+/* Tablets (601px a 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    /*faltou tempo*/
+}
+
