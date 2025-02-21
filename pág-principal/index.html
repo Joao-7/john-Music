@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="Temaclaro.css"> -->
+    <link rel="stylesheet" href="mudarTema.css">
     <link rel="shortcut icon" type="image/x-icon" href="/imagens/logob.png">
     <link rel="preconnect" href="https://fonts.gyoogleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,631 +16,633 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>jonh Music__Streaming de músicas</title>
 </head>
+
 <body>
-<header id="header" class="headerp">
+    <header id="header" class="headerp">
 
-    <img class="logop" src="/imagens/logob.png" alt="logo">
+        <img class="logop" src="/imagens/logob.png" alt="logo">
 
-    <div class="search-box">
-        <i class="fas fa-search"></i>
-        <div>
-            <input type="text" class="pes" id="Pesquisar" placeholder="Que musica queres ouvir?" oninput="pesquisar()">
-        </div>
-    </div>
-    <button title="Menu" onclick="abrirMenuP()" class="box-icone-m">
-        <i id="icone-menu" class="fa-solid fa-bars"></i>
-    </button>
-
-</header>
-
-<div class="box-menu">
-    <button class="button-menu"><i id="icone-inicio" class="fa-solid fa-house"></i>Inicio</button>
-    <button class="button-menu"> <i id="icone-perfil" class="fa-solid fa-user"></i>Perfil</button>
-    <button class="button-menu"><i id="icone-bibli" class="fa-solid fa-book-open"></i>Biblioteca</button>
-    <button id="button-conf" class="button-menu" onclick="abrirMenuconf()"><i id="icone-conf"
-            class="fa-solid fa-gear"></i>Configurações</button>
-</div>
-
-<!-- <div class="Configurações">
-
-    <button onclick="fecharConf()" class="button">
-        <span class="X"></span>
-        <span class="Y"></span>
-    </button>
-
-    <label for="escolhertema">Escolher tema</labe>
-</div> -->
-
-<div class="containercont">
-    <div class="box-left">
-        <header class="header-box-left">
-            <a class="link-bibli" href="#"></i>Biblioteca</a>
-        </header>
-        <div class="box-rolável">
-            <div class="boxbtnrol">
-                <p class="p1">Crie uma playlist</p>
-                <p class="p2">Clique no botão!</p>
-                <button class="buttonrol">Criar playlist</button>
-            </div>
-            <div class="boxbtnrol">
-                <form action="https://formsubmit.co/joaolucasalvesdantas5@gmail.com" method="post">
-                    <p class="p1">Tem uma sugestão de música?</p>
-                    <p class="p2">É só nos enviar</p>
-                    <input class="inputsugestao" type="text" name="Sugestão de música" placeholder="Sua música">
-                    <button id="btnsuges" class="buttonrol" type="submit">Enviar</button>
-                </form>
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <div>
+                <input type="text" class="pes" id="Pesquisar" placeholder="Que musica queres ouvir?"
+                    oninput="pesquisar()">
             </div>
         </div>
+
+        <div class="botõesright">
+            <label id="modeToggle" class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+
+            <button title="Menu" onclick="abrirMenuP()" class="box-icone-m">
+                <i id="icone-menu" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="box-menu">
+        <button class="button-menu"><i id="icone-inicio" class="fa-solid fa-house"></i>Inicio</button>
+        <button class="button-menu"> <i id="icone-perfil" class="fa-solid fa-user"></i>Perfil</button>
+        <button class="button-menu"><i id="icone-bibli" class="fa-solid fa-book-open"></i>Biblioteca</button>
     </div>
 
-
-    <div class="separator" id="separator"></div>
-
-
-    <div class="box-right">
-        <div class="button-absolute">
-            <h2 id="h2-artistas" class="h2-carro">Artistas</h2>
-            <div class="box-seta">
-                <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <div class="carrossel">
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/the weeknd.jpg" alt="">
-                    <p class="name-artista-a">The Weeknd</p>
-                    <p class="nomeartista">Artista</p>
+    <div class="containercont">
+        <div class="box-left">
+            <header class="header-box-left">
+                <a class="link-bibli" href="#"></i>Biblioteca</a>
+            </header>
+            <div class="box-rolável">
+                <div class="boxbtnrol">
+                    <p class="p1">Crie uma playlist</p>
+                    <p class="p2">Clique no botão!</p>
+                    <button class="buttonrol">Criar playlist</button>
                 </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/AC-DC.jpg" alt="">
-                    <p class="name-artista-a">AC/DC</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/Gabriela Rocha.jpg" alt="">
-                    <p class="name-artista-a">Gabriela Rocha</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/Miles Davis.jpg" alt="">
-                    <p class="name-artista-a">Miles Davis</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/Ludovico.jpg" alt="">
-                    <p class="name-artista-a">Ludovico Einaudi</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/Beyoncé.jpg" alt="">
-                    <p class="name-artista-a">Beyoncé</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/Metálica.jpg" alt="">
-                    <p class="name-artista-a">Metallica</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/Aline Barros.jpg" alt="">
-                    <p class="name-artista-a">Aline Barros</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/jonh Coltrane.jpg" alt="">
-                    <p class="name-artista-a">John Coltrane</p>
-                    <p class="nomeartista">Artista</p>
-                </div>
-
-                <div class="artistas">
-                    <img class="img-artistas" src="/imagens/Artistas/johann Sebastian.jpg" alt="">
-                    <p class="name-artista-a">Johann Sebastian Bach</p>
-                    <p class="nomeartista">Artista</p>
+                <div class="boxbtnrol">
+                    <form action="https://formsubmit.co/joaolucasalvesdantas5@gmail.com" method="post">
+                        <p class="p1">Tem uma sugestão de música?</p>
+                        <p class="p2">É só nos enviar</p>
+                        <input class="inputsugestao" type="text" name="Sugestão de música" placeholder="Sua música">
+                        <button id="btnsuges" class="buttonrol" type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="button-absolute">
-            <h2 class="h2-carro">Rock</h2>
-            <div class="box-seta">
-                <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <div class="carrossel">
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Bohemian Rhapsody.jpg" alt="">
-                    <p class="name-music">Bohemian Rhapsody</p>
-                    <p class="name-artista">Quee</p>
-                    <div data-audio="audio1" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Stairway to Heaven.jpg" alt="">
-                    <p class="name-music">Stairway to Heaven</p>
-                    <p class="name-artista">Led Zeppelin</p>
-                    <div data-audio="audio2" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Smells Like Teen Sirit.jpg"
-                        alt="">
-                    <p class="name-music">Smells Like Teen Spirit</p>
-                    <p class="name-artista">Nirvana</p>
-                    <div data-audio="audio3" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Sweet Child O'Mine.jpg" alt="">
-                    <p class="name-music">Sweet Child O' Mine</p>
-                    <p class="name-artista">Guns N' Roses</p>
-                    <div data-audio="audio4" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Back In Black.jpg" alt="">
-                    <p class="name-music">Back in Black</p>
-                    <p class="name-artista">AC/DC</p>
-                    <div data-audio="audio5" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Hotel California.jpg" alt="">
-                    <p class="name-music">Hotel California</p>
-                    <p class="name-artista">Eagles</p>
-                    <div data-audio="audio6" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Paint It Black.jfif" alt="">
-                    <p class="name-music">Paint It Black</p>
-                    <p class="name-artista">The Rolling Stones</p>
-                    <div data-audio="audio7" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Born To Run.jfif" alt="">
-                    <p class="name-music">Born to Run</p>
-                    <p class="name-artista">Bruce Springsteen</p>
-                    <div data-audio="audio8" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Paranoid.jfif" alt="">
-                    <p class="name-music">Paranoid</p>
-                    <p class="name-artista">Black Sabbath</p>
-                    <div data-audio="audio9" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Livin'On A Prayer.jfif" alt="">
-                    <p class="name-music">Livin' on a Prayer</p>
-                    <p class="name-artista">Bon Jovi</p>
-                    <div data-audio="audio10" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-            </div>
-        </div>
 
-        <div class="button-absolute">
-            <h2 class="h2-carro">Clássica</h2>
-            <div class="box-seta">
-                <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <div class="carrossel">
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Fur Elise.jfif" alt="">
-                    <p class="name-music">Für Elise</p>
-                    <p class="name-artista">Ludwig van Beethoven</p>
-                    <div data-audio="audio11" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Canon in D.jfif" alt="">
-                    <p class="name-music">Canon in D</p>
-                    <p class="name-artista">Johann Pachelbel</p>
-                    <div data-audio="audio12" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/The Four Seasons Spring.jfif"
-                        alt="">
-                    <p class="name-music">The Four Seasons: Spring</p>
-                    <p class="name-artista">Antonio Vivaldi</p>
-                    <div data-audio="audio13" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Clair De Lune.jfif" alt="">
-                    <p class="name-music">Clair de Lune</p>
-                    <p class="name-artista">Claude Debussy</p>
-                    <div data-audio="audio14" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Symphony No. 5.jfif" alt="">
-                    <p class="name-music">Symphony No. 5</p>
-                    <p class="name-artista">Ludwig van Beethoven</p>
-                    <div data-audio="audio15" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Swan Lake.jfif" alt="">
-                    <p class="name-music">Swan Lake</p>
-                    <p class="name-artista">Pyotr Ilyich Tchaikovsky</p>
-                    <div data-audio="audio16" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Nocturne Op. 9 No. 2.jfif"
-                        alt="">
-                    <p class="name-music">Nocturne Op. 9 No. 2</p>
-                    <p class="name-artista">Frédéric Chopin</p>
-                    <div data-audio="audio17" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Ave Maria.jfif" alt="">
-                    <p class="name-music">Ave Maria</p>
-                    <p class="name-artista">Franz Schubert</p>
-                    <div data-audio="audio18" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Moonlight Sonata.jfif" alt="">
-                    <p class="name-music">Moonlight Sonata</p>
-                    <p class="name-artista">Ludwig van Beethoven</p>
-                    <div data-audio="audio19" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Ride of the Valkyries.jfif"
-                        alt="">
-                    <p class="name-music">Ride of the Valkyries</p>
-                    <p class="name-artista">Richard Wagner</p>
-                    <div data-audio="audio20" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
+        <div class="separator" id="separator"></div>
+
+
+        <div class="box-right">
+            <div class="button-absolute">
+                <h2 id="h2-artistas" class="h2-carro">Artistas</h2>
+                <div class="box-seta">
+                    <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-            </div>
-        </div>
+                <div class="carrossel">
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/the weeknd.jpg" alt="">
+                        <p class="name-artista-a">The Weeknd</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-        <div class="button-absolute">
-        <h2 class="h2-carro">Pop</h2>
-            <div class="box-seta">
-                <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <div class="carrossel">
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Blinding Lights.jfif" alt="">
-                    <p class="name-music">Blinding Lights</p>
-                    <p class="name-artista">The Weeknd</p>
-                    <div data-audio="audio21" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Levitating.jfif" alt="">
-                    <p class="name-music">Levitating</p>
-                    <p class="name-artista">Dua Lipa</p>
-                    <div data-audio="audio22" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/AC-DC.jpg" alt="">
+                        <p class="name-artista-a">AC/DC</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Watermelon Sugar.jfif" alt="">
-                    <p class="name-music">Watermelon Sugar</p>
-                    <p class="name-artista">Harry Styles</p>
-                    <div data-audio="audio23" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/Gabriela Rocha.jpg" alt="">
+                        <p class="name-artista-a">Gabriela Rocha</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/As It Was.jfif" alt="">
-                    <p class="name-music">As It Was</p>
-                    <p class="name-artista">Harry Styles</p>
-                    <div data-audio="audio24" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/Miles Davis.jpg" alt="">
+                        <p class="name-artista-a">Miles Davis</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Don't Start Now.jfif" alt="">
-                    <p class="name-music">Don't Start Now</p>
-                    <p class="name-artista">Dua Lipa</p>
-                    <div data-audio="audio25" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/Ludovico.jpg" alt="">
+                        <p class="name-artista-a">Ludovico Einaudi</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Shape of You.jfif" alt="">
-                    <p class="name-music">Shape of You</p>
-                    <p class="name-artista">Ed Sheeran</p>
-                    <div data-audio="audio26" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/Beyoncé.jpg" alt="">
+                        <p class="name-artista-a">Beyoncé</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Peaches.jfif" alt="">
-                    <p class="name-music">Peaches</p>
-                    <p class="name-artista">Justin Bieber</p>
-                    <div data-audio="audio27" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/Metálica.jpg" alt="">
+                        <p class="name-artista-a">Metallica</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Good 4 U.jfif" alt="">
-                    <p class="name-music">Good 4 U</p>
-                    <p class="name-artista">Olivia Rodrigo</p>
-                    <div data-audio="audio28" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/Aline Barros.jpg" alt="">
+                        <p class="name-artista-a">Aline Barros</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Bad Guy.jfif" alt="">
-                    <p class="name-music">Bad Guy</p>
-                    <p class="name-artista">Billie Eilish</p>
-                    <div data-audio="audio29" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/jonh Coltrane.jpg" alt="">
+                        <p class="name-artista-a">John Coltrane</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Positions.jfif" alt="">
-                    <p class="name-music">Positions</p>
-                    <p class="name-artista">Ariana Grande</p>
-                    <div data-audio="audio30" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
+                    <div class="artistas">
+                        <img class="img-artistas" src="/imagens/Artistas/johann Sebastian.jpg" alt="">
+                        <p class="name-artista-a">Johann Sebastian Bach</p>
+                        <p class="nomeartista">Artista</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="button-absolute">
-        <h2 class="h2-carro">Gospel</h2>
-            <div class="box-seta">
-                <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <div class="carrossel">
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Lugar Secreto.jfif" alt="">
-                    <p class="name-music">Lugar Secreto</p>
-                    <p class="name-artista">Gabriela Rocha</p>
-                    <div data-audio="audio31" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
+            <div class="button-absolute">
+                <h2 class="h2-carro">Rock</h2>
+                <div class="box-seta">
+                    <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Ninguém Explica Deus.jfif" alt="">
-                    <p class="name-music">Ninguém Explica Deus</p>
-                    <p class="name-artista">Preto no Branco</p>
-                    <div data-audio="audio32" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/A Casa É Sua.jfif" alt="">
-                    <p class="name-music">A Casa É Sua</p>
-                    <p class="name-artista">Casa Worship</p>
-                    <div data-audio="audio33" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Me Atraiu.jfif" alt="">
-                    <p class="name-music">Me Atraiu</p>
-                    <p class="name-artista">Gabriela Gomes</p>
-                    <div data-audio="audio34" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Ta chorando por quê.jfif" alt="">
-                    <p class="name-music">Tá Chorando Por Quê?</p>
-                    <p class="name-artista">Bruna Karla</p>
-                    <div data-audio="audio35" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Grandes Coisas.jfif" alt="">
-                    <p class="name-music">Grandes Coisas</p>
-                    <p class="name-artista">Fernandinho</p>
-                    <div data-audio="audio36" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Raridade.jfif" alt="">
-                    <p class="name-music">Raridade</p>
-                    <p class="name-artista">Anderson Freire</p>
-                    <div data-audio="audio37" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Deus Proverá.jfif" alt="">
-                    <p class="name-music">Deus Proverá</p>
-                    <p class="name-artista">Gabriela Gomes</p>
-                    <div data-audio="audio38" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Os Sonhos de Deus.jfif" alt="">
-                    <p class="name-music">Os Sonhos de Deus</p>
-                    <p class="name-artista">Ludmila Ferber</p>
-                    <div data-audio="audio39" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Yeshua.jfif" alt="">
-                    <p class="name-music">Yeshua</p>
-                    <p class="name-artista">Fernandinho</p>
-                    <div data-audio="audio40" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
+                <div class="carrossel">
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Bohemian Rhapsody.jpg"
+                            alt="">
+                        <p class="name-music">Bohemian Rhapsody</p>
+                        <p class="name-artista">Quee</p>
+                        <div data-audio="audio1" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Stairway to Heaven.jpg"
+                            alt="">
+                        <p class="name-music">Stairway to Heaven</p>
+                        <p class="name-artista">Led Zeppelin</p>
+                        <div data-audio="audio2" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Smells Like Teen Sirit.jpg"
+                            alt="">
+                        <p class="name-music">Smells Like Teen Spirit</p>
+                        <p class="name-artista">Nirvana</p>
+                        <div data-audio="audio3" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Sweet Child O'Mine.jpg"
+                            alt="">
+                        <p class="name-music">Sweet Child O' Mine</p>
+                        <p class="name-artista">Guns N' Roses</p>
+                        <div data-audio="audio4" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Back In Black.jpg" alt="">
+                        <p class="name-music">Back in Black</p>
+                        <p class="name-artista">AC/DC</p>
+                        <div data-audio="audio5" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Hotel California.jpg" alt="">
+                        <p class="name-music">Hotel California</p>
+                        <p class="name-artista">Eagles</p>
+                        <div data-audio="audio6" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Paint It Black.jfif" alt="">
+                        <p class="name-music">Paint It Black</p>
+                        <p class="name-artista">The Rolling Stones</p>
+                        <div data-audio="audio7" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Born To Run.jfif" alt="">
+                        <p class="name-music">Born to Run</p>
+                        <p class="name-artista">Bruce Springsteen</p>
+                        <div data-audio="audio8" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Paranoid.jfif" alt="">
+                        <p class="name-music">Paranoid</p>
+                        <p class="name-artista">Black Sabbath</p>
+                        <div data-audio="audio9" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Livin'On A Prayer.jfif"
+                            alt="">
+                        <p class="name-music">Livin' on a Prayer</p>
+                        <p class="name-artista">Bon Jovi</p>
+                        <div data-audio="audio10" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="button-absolute">
-            <h2 class="h2-carro">Jazz</h2>
-            <div class="box-seta">
-                <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <div class="carrossel">
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/So What.jpg" alt="">
-                    <p class="name-music">So What</p>
-                    <p class="name-artista">Miles Davis</p>
-                    <div data-audio="audio41" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
+            <div class="button-absolute">
+                <h2 class="h2-carro">Clássica</h2>
+                <div class="box-seta">
+                    <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
+                <div class="carrossel">
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Fur Elise.jfif" alt="">
+                        <p class="name-music">Für Elise</p>
+                        <p class="name-artista">Ludwig van Beethoven</p>
+                        <div data-audio="audio11" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Canon in D.jfif" alt="">
+                        <p class="name-music">Canon in D</p>
+                        <p class="name-artista">Johann Pachelbel</p>
+                        <div data-audio="audio12" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/The Four Seasons Spring.jfif"
+                            alt="">
+                        <p class="name-music">The Four Seasons: Spring</p>
+                        <p class="name-artista">Antonio Vivaldi</p>
+                        <div data-audio="audio13" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Clair De Lune.jfif" alt="">
+                        <p class="name-music">Clair de Lune</p>
+                        <p class="name-artista">Claude Debussy</p>
+                        <div data-audio="audio14" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Symphony No. 5.jfif" alt="">
+                        <p class="name-music">Symphony No. 5</p>
+                        <p class="name-artista">Ludwig van Beethoven</p>
+                        <div data-audio="audio15" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Swan Lake.jfif" alt="">
+                        <p class="name-music">Swan Lake</p>
+                        <p class="name-artista">Pyotr Ilyich Tchaikovsky</p>
+                        <div data-audio="audio16" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Nocturne Op. 9 No. 2.jfif"
+                            alt="">
+                        <p class="name-music">Nocturne Op. 9 No. 2</p>
+                        <p class="name-artista">Frédéric Chopin</p>
+                        <div data-audio="audio17" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Ave Maria.jfif" alt="">
+                        <p class="name-music">Ave Maria</p>
+                        <p class="name-artista">Franz Schubert</p>
+                        <div data-audio="audio18" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Moonlight Sonata.jfif"
+                            alt="">
+                        <p class="name-music">Moonlight Sonata</p>
+                        <p class="name-artista">Ludwig van Beethoven</p>
+                        <div data-audio="audio19" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music"><img class="capa" src="/imagens/Capas de Música/Ride of the Valkyries.jfif"
+                            alt="">
+                        <p class="name-music">Ride of the Valkyries</p>
+                        <p class="name-artista">Richard Wagner</p>
+                        <div data-audio="audio20" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
 
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Take Five.jpg" alt="">
-                    <p class="name-music">Take Five</p>
-                    <p class="name-artista">Dave Brubeck</p>
-                    <div data-audio="audio42" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Blue in Gree.jpg" alt="">
-                    <p class="name-music">Blue in Green</p>
-                    <p class="name-artista">Miles Davis</p>
-                    <div data-audio="audio43" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Freedom Jazz Dance.jpg" alt="">
-                    <p class="name-music">Freedom Jazz Dance</p>
-                    <p class="name-artista">Miles Davis</p>
-                    <div data-audio="audio44" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Autumn Leaves.jpg" alt="">
-                    <p class="name-music">Autumn Leaves</p>
-                    <p class="name-artista">Bill Evans</p>
-                    <div data-audio="audio45" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/My Favorite Things.jpg" alt="">
-                    <p class="name-music">My Favorite Things</p>
-                    <p class="name-artista">John Coltrane</p>
-                    <div data-audio="audio46" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Misterioso.jpg" alt="">
-                    <p class="name-music">Misterioso</p>
-                    <p class="name-artista">Thelonious Monk</p>
-                    <div data-audio="audio47" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Cantaloupe Island.jpg" alt="">
-                    <p class="name-music">Cantaloupe Island</p>
-                    <p class="name-artista">Herbie Hancock</p>
-                    <div data-audio="audio48" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Take The A Train.jpg" alt="">
-                    <p class="name-music">Take The A Train</p>
-                    <p class="name-artista">Duke Ellington</p>
-                    <div data-audio="audio49" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
-                </div>
-
-                <div class="box-music">
-                    <img class="capa" src="/imagens/Capas de Música/Goodbye Pork Pie Hat.jpg" alt="">
-                    <p class="name-music">Goodbye Pork Pie Hat</p>
-                    <p class="name-artista">Charles Mingus</p>
-                    <div data-audio="audio50" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
-                            class="fa-solid fa-pause"></i></div>
                 </div>
             </div>
-            <div class="box-artistas">
+
+            <div class="button-absolute">
+                <h2 class="h2-carro">Pop</h2>
+                <div class="box-seta">
+                    <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="carrossel">
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Blinding Lights.jfif" alt="">
+                        <p class="name-music">Blinding Lights</p>
+                        <p class="name-artista">The Weeknd</p>
+                        <div data-audio="audio21" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Levitating.jfif" alt="">
+                        <p class="name-music">Levitating</p>
+                        <p class="name-artista">Dua Lipa</p>
+                        <div data-audio="audio22" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Watermelon Sugar.jfif" alt="">
+                        <p class="name-music">Watermelon Sugar</p>
+                        <p class="name-artista">Harry Styles</p>
+                        <div data-audio="audio23" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/As It Was.jfif" alt="">
+                        <p class="name-music">As It Was</p>
+                        <p class="name-artista">Harry Styles</p>
+                        <div data-audio="audio24" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Don't Start Now.jfif" alt="">
+                        <p class="name-music">Don't Start Now</p>
+                        <p class="name-artista">Dua Lipa</p>
+                        <div data-audio="audio25" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Shape of You.jfif" alt="">
+                        <p class="name-music">Shape of You</p>
+                        <p class="name-artista">Ed Sheeran</p>
+                        <div data-audio="audio26" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Peaches.jfif" alt="">
+                        <p class="name-music">Peaches</p>
+                        <p class="name-artista">Justin Bieber</p>
+                        <div data-audio="audio27" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Good 4 U.jfif" alt="">
+                        <p class="name-music">Good 4 U</p>
+                        <p class="name-artista">Olivia Rodrigo</p>
+                        <div data-audio="audio28" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Bad Guy.jfif" alt="">
+                        <p class="name-music">Bad Guy</p>
+                        <p class="name-artista">Billie Eilish</p>
+                        <div data-audio="audio29" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Positions.jfif" alt="">
+                        <p class="name-music">Positions</p>
+                        <p class="name-artista">Ariana Grande</p>
+                        <div data-audio="audio30" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="openplayer"><i class="fa-solid fa-angle-up"></i></div>
-        <div class="boxplayer">
-            <!--Músicas-->
-            <!--Rock-->
-            <audio controls class="audio" id="audio1" src="/Músicas/Rock/Bohemian Rhapsody.mp3"></audio>
-            <audio controls class="audio" id="audio2" src="/Músicas/Rock/Stairway to Heaven.mp3"></audio>
-            <audio controls class="audio" id="audio3" src="/Músicas/Rock/Smells Like Teen Spirit.mp3"></audio>
-            <audio controls class="audio" id="audio4" src="/Músicas/Rock/Sweet Child O' Mine.mp3"></audio>
-            <audio controls class="audio" id="audio5" src="/Músicas/Rock/Back in black.mp3 "></audio>
-            <audio controls class="audio" id="audio6" src="/Músicas/Rock/hotel Califórnia.mp3"></audio>
-            <audio controls class="audio" id="audio7" src="/Músicas/Rock/Paint It Black.mp3"></audio>
-            <audio controls class="audio" id="audio8" src="/Músicas/Rock/Born to Run.mp3"></audio>
-            <audio controls class="audio" id="audio9" src="/Músicas/Rock/Paranoid.mp3"></audio>
-            <audio controls class="audio" id="audio10" src="/Músicas/Rock/Livin' on a Prayer.mp3"></audio>
-            <!--Rock-->
+            <div class="button-absolute">
+                <h2 class="h2-carro">Gospel</h2>
+                <div class="box-seta">
+                    <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
 
-            <!--Clássica-->
-            <audio controls class="audio" id="audio11" src="/Músicas/Clássica/Für Elise.mp3"></audio>
-            <audio controls class="audio" id="audio12"
-                src="/Músicas/Clássica/Pachelbel - Canon In D Major. Best version..mp3"></audio>
-            <audio controls class="audio" id="audio13" src="/Músicas/Clássica/The Four Seasons Spring.mp3"></audio>
-            <audio controls class="audio" id="audio14" src="/Músicas/Clássica/Clair de Lune.mp3"></audio>
-            <audio controls class="audio" id="audio15" src="/Músicas/Clássica/Symphony No. 5.mp3"></audio>
-            <audio controls class="audio" id="audio16" src="/Músicas/Clássica/Swan Lake.mp3"></audio>
-            <audio controls class="audio" id="audio17" src="/Músicas/Clássica/Nocturne Op. 9 No. 2.mp3"></audio>
-            <audio controls class="audio" id="audio18" src="/Músicas/Clássica/Ave Maria.mp3"></audio>
-            <audio controls class="audio" id="audio19" src="/Músicas/Clássica/Moonlight Sonata.mp3"></audio>
-            <audio controls class="audio" id="audio20" src="/Músicas/Clássica/Ride of the Valkyries.mp3"></audio>
-            <!--Clássica-->
+                <div class="carrossel">
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Lugar Secreto.jfif" alt="">
+                        <p class="name-music">Lugar Secreto</p>
+                        <p class="name-artista">Gabriela Rocha</p>
+                        <div data-audio="audio31" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
 
-            <!--Pop-->
-            <audio controls class="audio" id="audio21" src="/Músicas/Pop/Blinding Lights.mp3"></audio>
-            <audio controls class="audio" id="audio22" src="/Músicas/Pop/levitating.mp3"></audio>
-            <audio controls class="audio" id="audio23" src="/Músicas/Pop/As it Was.mp3"></audio>
-            <audio controls class="audio" id="audio24" src="/Músicas/Pop/As it Was.mp3"></audio>
-            <audio controls class="audio" id="audio25" src="/Músicas/Pop/Dont't Start Now.mp3"></audio>
-            <audio controls class="audio" id="audio26" src="/Músicas/Pop/Shape of you.mp3"></audio>
-            <audio controls class="audio" id="audio27" src="/Músicas/Pop/Peaches.mp3"></audio>
-            <audio controls class="audio" id="audio28" src="/Músicas/Pop/Good 4 u.mp3"></audio>
-            <audio controls class="audio" id="audio29" src="/Músicas/Pop/Bad Guy.mp3"></audio>
-            <audio controls class="audio" id="audio30" src="/Músicas/Pop/Positions.mp3"></audio>
-            <!--Pop-->
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Ninguém Explica Deus.jfif" alt="">
+                        <p class="name-music">Ninguém Explica Deus</p>
+                        <p class="name-artista">Preto no Branco</p>
+                        <div data-audio="audio32" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
 
-            <!--Gospel-->
-            <audio controls class="audio" id="audio31" src="/Músicas/Gospel/Lugar Secreto.mp3"></audio>
-            <audio controls class="audio" id="audio32" src="/Músicas/Gospel/Ninguém Explica Deus.mp3"></audio>
-            <audio controls class="audio" id="audio33" src="/Músicas/Gospel/A Casa É Sua.mp3"></audio>
-            <audio controls class="audio" id="audio34" src="/Músicas/Gospel/Me Atraiu.mp3"></audio>
-            <audio controls class="audio" id="audio35" src="/Músicas/Gospel/Tá Chorando Porque.mp3"></audio>
-            <audio controls class="audio" id="audio36" src="/Músicas/Gospel/Grandes Coisas.mp3"></audio>
-            <audio controls class="audio" id="audio37" src="/Músicas/Gospel/Raridade.mp3"></audio>
-            <audio controls class="audio" id="audio38" src="/Músicas/Gospel/Deus Proverá.mp3"></audio>
-            <audio controls class="audio" id="audio39" src="/Músicas/Gospel/Os Sonhos de Deus.mp3"></audio>
-            <audio controls class="audio" id="audio40" src="/Músicas/Gospel/Yeshua.mp3"></audio>
-            <!--Gospel-->
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/A Casa É Sua.jfif" alt="">
+                        <p class="name-music">A Casa É Sua</p>
+                        <p class="name-artista">Casa Worship</p>
+                        <div data-audio="audio33" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
 
-            <!--Jazz-->
-            <audio controls class="audio" id="audio41" src="/Músicas/Jazz/So What.mp3"></audio>
-            <audio controls class="audio" id="audio42" src="/Músicas/Jazz/Take Five.mp3"></audio>
-            <audio controls class="audio" id="audio43" src="/Músicas/Jazz/Blue In Green.mp3"></audio>
-            <audio controls class="audio" id="audio44" src="/Músicas/Jazz/Freedom Jazz Dance.mp3"></audio>
-            <audio controls class="audio" id="audio45" src="/Músicas/Jazz/Autumn Leaves.mp3"></audio>
-            <audio controls class="audio" id="audio46" src="/Músicas/Jazz/My Favorite Things.mp3"></audio>
-            <audio controls class="audio" id="audio47" src="/Músicas/Jazz/Misterioso.mp3"></audio>
-            <audio controls class="audio" id="audio48" src="/Músicas/Jazz/Cantaloupe Island.mp3"></audio>
-            <audio controls class="audio" id="audio49" src="/Músicas/Jazz/Take the A Train.mp3"></audio>
-            <audio controls class="audio" id="audio50" src="/Músicas/Jazz/Goodbye Pork Pie Hat.mp3"></audio>
-            <!--Jazz-->
-            <!--Músicas-->
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Me Atraiu.jfif" alt="">
+                        <p class="name-music">Me Atraiu</p>
+                        <p class="name-artista">Gabriela Gomes</p>
+                        <div data-audio="audio34" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Ta chorando por quê.jfif" alt="">
+                        <p class="name-music">Tá Chorando Por Quê?</p>
+                        <p class="name-artista">Bruna Karla</p>
+                        <div data-audio="audio35" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Grandes Coisas.jfif" alt="">
+                        <p class="name-music">Grandes Coisas</p>
+                        <p class="name-artista">Fernandinho</p>
+                        <div data-audio="audio36" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Raridade.jfif" alt="">
+                        <p class="name-music">Raridade</p>
+                        <p class="name-artista">Anderson Freire</p>
+                        <div data-audio="audio37" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Deus Proverá.jfif" alt="">
+                        <p class="name-music">Deus Proverá</p>
+                        <p class="name-artista">Gabriela Gomes</p>
+                        <div data-audio="audio38" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Os Sonhos de Deus.jfif" alt="">
+                        <p class="name-music">Os Sonhos de Deus</p>
+                        <p class="name-artista">Ludmila Ferber</p>
+                        <div data-audio="audio39" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Yeshua.jfif" alt="">
+                        <p class="name-music">Yeshua</p>
+                        <p class="name-artista">Fernandinho</p>
+                        <div data-audio="audio40" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-absolute">
+                <h2 class="h2-carro">Jazz</h2>
+                <div class="box-seta">
+                    <button class="move-left-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="move-right-button"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="carrossel">
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/So What.jpg" alt="">
+                        <p class="name-music">So What</p>
+                        <p class="name-artista">Miles Davis</p>
+                        <div data-audio="audio41" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Take Five.jpg" alt="">
+                        <p class="name-music">Take Five</p>
+                        <p class="name-artista">Dave Brubeck</p>
+                        <div data-audio="audio42" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Blue in Gree.jpg" alt="">
+                        <p class="name-music">Blue in Green</p>
+                        <p class="name-artista">Miles Davis</p>
+                        <div data-audio="audio43" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Freedom Jazz Dance.jpg" alt="">
+                        <p class="name-music">Freedom Jazz Dance</p>
+                        <p class="name-artista">Miles Davis</p>
+                        <div data-audio="audio44" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Autumn Leaves.jpg" alt="">
+                        <p class="name-music">Autumn Leaves</p>
+                        <p class="name-artista">Bill Evans</p>
+                        <div data-audio="audio45" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/My Favorite Things.jpg" alt="">
+                        <p class="name-music">My Favorite Things</p>
+                        <p class="name-artista">John Coltrane</p>
+                        <div data-audio="audio46" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Misterioso.jpg" alt="">
+                        <p class="name-music">Misterioso</p>
+                        <p class="name-artista">Thelonious Monk</p>
+                        <div data-audio="audio47" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Cantaloupe Island.jpg" alt="">
+                        <p class="name-music">Cantaloupe Island</p>
+                        <p class="name-artista">Herbie Hancock</p>
+                        <div data-audio="audio48" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Take The A Train.jpg" alt="">
+                        <p class="name-music">Take The A Train</p>
+                        <p class="name-artista">Duke Ellington</p>
+                        <div data-audio="audio49" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+
+                    <div class="box-music">
+                        <img class="capa" src="/imagens/Capas de Música/Goodbye Pork Pie Hat.jpg" alt="">
+                        <p class="name-music">Goodbye Pork Pie Hat</p>
+                        <p class="name-artista">Charles Mingus</p>
+                        <div data-audio="audio50" class="play"><i class="fa-solid fa-play"></i><i style="display: none;"
+                                class="fa-solid fa-pause"></i></div>
+                    </div>
+                </div>
+                <div class="box-artistas">
+                </div>
+            </div>
+
+            <div class="openplayer"><i class="fa-solid fa-angle-up"></i></div>
+            <div class="boxplayer">
+                <!--Músicas-->
+                <!--Rock-->
+                <audio controls class="audio" id="audio1" src="/Músicas/Rock/Bohemian Rhapsody.mp3"></audio>
+                <audio controls class="audio" id="audio2" src="/Músicas/Rock/Stairway to Heaven.mp3"></audio>
+                <audio controls class="audio" id="audio3" src="/Músicas/Rock/Smells Like Teen Spirit.mp3"></audio>
+                <audio controls class="audio" id="audio4" src="/Músicas/Rock/Sweet Child O' Mine.mp3"></audio>
+                <audio controls class="audio" id="audio5" src="/Músicas/Rock/Back in black.mp3 "></audio>
+                <audio controls class="audio" id="audio6" src="/Músicas/Rock/hotel Califórnia.mp3"></audio>
+                <audio controls class="audio" id="audio7" src="/Músicas/Rock/Paint It Black.mp3"></audio>
+                <audio controls class="audio" id="audio8" src="/Músicas/Rock/Born to Run.mp3"></audio>
+                <audio controls class="audio" id="audio9" src="/Músicas/Rock/Paranoid.mp3"></audio>
+                <audio controls class="audio" id="audio10" src="/Músicas/Rock/Livin' on a Prayer.mp3"></audio>
+                <!--Rock-->
+
+                <!--Clássica-->
+                <audio controls class="audio" id="audio11" src="/Músicas/Clássica/Für Elise.mp3"></audio>
+                <audio controls class="audio" id="audio12"
+                    src="/Músicas/Clássica/Pachelbel - Canon In D Major. Best version..mp3"></audio>
+                <audio controls class="audio" id="audio13" src="/Músicas/Clássica/The Four Seasons Spring.mp3"></audio>
+                <audio controls class="audio" id="audio14" src="/Músicas/Clássica/Clair de Lune.mp3"></audio>
+                <audio controls class="audio" id="audio15" src="/Músicas/Clássica/Symphony No. 5.mp3"></audio>
+                <audio controls class="audio" id="audio16" src="/Músicas/Clássica/Swan Lake.mp3"></audio>
+                <audio controls class="audio" id="audio17" src="/Músicas/Clássica/Nocturne Op. 9 No. 2.mp3"></audio>
+                <audio controls class="audio" id="audio18" src="/Músicas/Clássica/Ave Maria.mp3"></audio>
+                <audio controls class="audio" id="audio19" src="/Músicas/Clássica/Moonlight Sonata.mp3"></audio>
+                <audio controls class="audio" id="audio20" src="/Músicas/Clássica/Ride of the Valkyries.mp3"></audio>
+                <!--Clássica-->
+
+                <!--Pop-->
+                <audio controls class="audio" id="audio21" src="/Músicas/Pop/Blinding Lights.mp3"></audio>
+                <audio controls class="audio" id="audio22" src="/Músicas/Pop/levitating.mp3"></audio>
+                <audio controls class="audio" id="audio23" src="/Músicas/Pop/As it Was.mp3"></audio>
+                <audio controls class="audio" id="audio24" src="/Músicas/Pop/As it Was.mp3"></audio>
+                <audio controls class="audio" id="audio25" src="/Músicas/Pop/Dont't Start Now.mp3"></audio>
+                <audio controls class="audio" id="audio26" src="/Músicas/Pop/Shape of you.mp3"></audio>
+                <audio controls class="audio" id="audio27" src="/Músicas/Pop/Peaches.mp3"></audio>
+                <audio controls class="audio" id="audio28" src="/Músicas/Pop/Good 4 u.mp3"></audio>
+                <audio controls class="audio" id="audio29" src="/Músicas/Pop/Bad Guy.mp3"></audio>
+                <audio controls class="audio" id="audio30" src="/Músicas/Pop/Positions.mp3"></audio>
+                <!--Pop-->
+
+                <!--Gospel-->
+                <audio controls class="audio" id="audio31" src="/Músicas/Gospel/Lugar Secreto.mp3"></audio>
+                <audio controls class="audio" id="audio32" src="/Músicas/Gospel/Ninguém Explica Deus.mp3"></audio>
+                <audio controls class="audio" id="audio33" src="/Músicas/Gospel/A Casa É Sua.mp3"></audio>
+                <audio controls class="audio" id="audio34" src="/Músicas/Gospel/Me Atraiu.mp3"></audio>
+                <audio controls class="audio" id="audio35" src="/Músicas/Gospel/Tá Chorando Porque.mp3"></audio>
+                <audio controls class="audio" id="audio36" src="/Músicas/Gospel/Grandes Coisas.mp3"></audio>
+                <audio controls class="audio" id="audio37" src="/Músicas/Gospel/Raridade.mp3"></audio>
+                <audio controls class="audio" id="audio38" src="/Músicas/Gospel/Deus Proverá.mp3"></audio>
+                <audio controls class="audio" id="audio39" src="/Músicas/Gospel/Os Sonhos de Deus.mp3"></audio>
+                <audio controls class="audio" id="audio40" src="/Músicas/Gospel/Yeshua.mp3"></audio>
+                <!--Gospel-->
+
+                <!--Jazz-->
+                <audio controls class="audio" id="audio41" src="/Músicas/Jazz/So What.mp3"></audio>
+                <audio controls class="audio" id="audio42" src="/Músicas/Jazz/Take Five.mp3"></audio>
+                <audio controls class="audio" id="audio43" src="/Músicas/Jazz/Blue In Green.mp3"></audio>
+                <audio controls class="audio" id="audio44" src="/Músicas/Jazz/Freedom Jazz Dance.mp3"></audio>
+                <audio controls class="audio" id="audio45" src="/Músicas/Jazz/Autumn Leaves.mp3"></audio>
+                <audio controls class="audio" id="audio46" src="/Músicas/Jazz/My Favorite Things.mp3"></audio>
+                <audio controls class="audio" id="audio47" src="/Músicas/Jazz/Misterioso.mp3"></audio>
+                <audio controls class="audio" id="audio48" src="/Músicas/Jazz/Cantaloupe Island.mp3"></audio>
+                <audio controls class="audio" id="audio49" src="/Músicas/Jazz/Take the A Train.mp3"></audio>
+                <audio controls class="audio" id="audio50" src="/Músicas/Jazz/Goodbye Pork Pie Hat.mp3"></audio>
+                <!--Jazz-->
+                <!--Músicas-->
 
 
-            <div class="closeplayer"><i class="fa-solid fa-angle-down"></i></div>
+                <div class="closeplayer"><i class="fa-solid fa-angle-down"></i></div>
 
-        </div>
+            </div>
 
 
-        <script src="script.js"></script>
+            <script src="script.js"></script>
 
-        </body>
+</body>
 
 </html>

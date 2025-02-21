@@ -7,6 +7,7 @@
 
     body {
         background-color: rgb(10, 10, 10);
+        transition: background-color 0.3s ease;
     }
 
     .headerp {
@@ -17,12 +18,79 @@
         position: fixed;
         width: 100%;
         z-index: 1;
+        transition: background-color 0.3s ease;
     }
 
     .logop {
         margin-top: 10px;
         width: 40px;
         margin-left: 30px;
+    }
+
+    .botõesright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* From Uiverse.io by shadowfax29 */
+    /* The switch - the box around the slider */
+    .switch {
+        font-size: 15px;
+        position: relative;
+        display: inline-block;
+        width: 3.5em;
+        height: 2em;
+        margin-top: 10px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        /* Cor inicial para tema escuro */
+        transition: .4s;
+        border-radius: 30px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 1.4em;
+        width: 1.4em;
+        border-radius: 20px;
+        right: 0.3em;
+        /* Movendo para a direita */
+        bottom: 0.3em;
+        background-color: black;
+        box-shadow: inset -9px 0px 1px 0px white;
+        /* Efeito de meia-lua */
+        transition: .4s;
+    }
+
+    .switch input:checked+.slider {
+        background-color: #2196F3;
+        /* Cor para o modo claro */
+    }
+
+    .switch input:checked+.slider:before {
+        background-color: yellow;
+        box-shadow: none;
+        transform: translateX(-1.5em);
+        /* Movendo para a esquerda */
     }
 
 
@@ -35,13 +103,15 @@
 
     .search-box>i {
         position: absolute;
-        left: 18px;
+        z-index: 10;
+        left: 80px;
         top: 50%;
         transform: translateY(-50%);
         color: #999;
     }
 
     .pes {
+        color: white;
         border: none;
         outline: none;
         background-color: rgb(25, 25, 25);
@@ -53,7 +123,12 @@
         border: 2px solid transparent;
         transition: background-color 0.3s ease;
         caret-color: white;
+        transform: translateX(60px);
     }
+
+    input::-webkit-input-placeholder {
+        color: rgb(207, 207, 207) !important; 
+    } 
 
     .pes:hover {
         background-color: rgb(36, 36, 36);
@@ -121,6 +196,7 @@
         box-shadow: 0 0 10px rgb(0, 0, 0);
         position: relative;
         z-index: 2;
+        transition: background-color 0.3s ease;
     }
 
 
@@ -152,11 +228,6 @@
     }
 
     #icone-bibli {
-        margin-right: 10px;
-        font-size: 15px;
-    }
-
-    #icone-conf {
         margin-right: 10px;
         font-size: 15px;
     }
@@ -235,7 +306,8 @@
         top: 80px;
         width: 100%;
         bottom: 10px;
-        transition: margin-bottom 0.3s ease;
+        transition: margin-bottom 0.3s ease,  backgroundColor 0.3s ease;
+        
     }
 
     .box-left {
@@ -246,6 +318,7 @@
         min-width: 300px;
         max-width: 450px;
         height: auto;
+        transition: background-color 0.3s ease;
     }
 
     .box-right {
@@ -260,6 +333,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         height: auto;
+        transition: background-color 0.3s ease;
     }
 
     .separator {
@@ -293,8 +367,9 @@
         background-color: rgb(20, 20, 20);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        height: 80px;
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.363);
+        height: 80px; 
+        box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.705);
+        transition: background-color 0.3s ease;
     }
 
     .box-rolável {
@@ -302,6 +377,7 @@
         background-color: rgb(20, 20, 20);
         overflow: auto;
         padding: 10px;
+        transition: background-color 0.3s ease;
     }
 
     .link-bibli {
@@ -333,6 +409,7 @@
         border-radius: 8px;
         padding: 15px;
         margin-bottom: 20px;
+        transition: background-color 0.3s ease;
     }
 
     .p1 {
@@ -689,23 +766,6 @@
         /* Cor de fundo do painel */
     }
 
-    /* .box-artistas {
-        position: absolute;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        z-index: 2000;
-        margin-left: 2px;
-        margin-right: 10px;
-        width: 100%;
-        background-color: rgb(20, 20, 20);
-        border-radius: 10px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        height: 100px;
-    } */
-
-
-
-
     /*--------------conteúdo do box right-------------*/
 
 
@@ -809,10 +869,12 @@
         .nomeartista {
             font-size: 13px;
         }
+
         .button-absolute {
             height: 280px;
         }
-        audio{
+
+        audio {
             width: 250px;
         }
     }

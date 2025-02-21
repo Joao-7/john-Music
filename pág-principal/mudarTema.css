@@ -1,0 +1,176 @@
+/* Modo Claro */
+body.claro {
+    background-color: rgb(240, 240, 240);
+    color: rgb(10, 10, 10);
+}
+
+.claro input::-webkit-input-placeholder {
+    color: rgb(44, 44, 44) !important; 
+} 
+
+.claro .headerp {
+    background-color: rgb(240, 240, 240);
+}
+
+.claro .search-box>i {
+    color: #666;
+}
+
+.claro .pes {
+    background-color: rgb(220, 220, 220);
+    caret-color: black;
+    color: black;
+}
+
+.claro .pes:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+.claro .pes:focus {
+    border: 2px solid rgb(48, 138, 255);
+}
+
+.claro .pes:active {
+    background-color: rgb(200, 200, 200);
+}
+
+.claro .box-icone-m:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+.claro .box-icone-m:focus {
+    background-color: rgb(200, 200, 200);
+}
+
+.claro .box-icone-m:active {
+    background-color: rgb(210, 210, 210);
+}
+
+.claro .box-menu {
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.claro .button-menu {
+    color: rgb(10, 10, 10);
+    background-color: rgb(250, 250, 250);
+}
+
+.claro .button-menu:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.claro .Configurações {
+    background-color: rgb(250, 250, 250);
+    color: rgb(10, 10, 10);
+}
+
+.claro .box-left,
+.claro .box-right {
+    background-color: rgb(230, 230, 230);
+}
+
+.claro .header-box-left {
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0px 5px 20px -5px rgba(165, 165, 165, 0.322);
+}
+
+.claro .box-rolável {
+    background-color: rgb(230, 230, 230);
+}
+
+.claro .link-bibli {
+    color: rgb(10, 10, 10);
+}
+
+.claro .link-bibli:hover {
+    color: rgb(30, 30, 30);
+}
+
+.claro .link-bibli:active {
+    color: rgb(50, 50, 50);
+}
+
+.claro .boxbtnrol {
+    background-color: rgb(210, 210, 210);
+}
+
+.claro .p1,
+.claro .p2 {
+    color: rgb(10, 10, 10);
+}
+
+.claro .buttonrol {
+    background-color: rgb(10, 10, 10);
+    color: rgb(240, 240, 240);
+}
+
+.claro .inputsugestao {
+    background-color: rgb(200, 200, 200);
+    color: rgb(10, 10, 10);
+    caret-color: black;
+}
+
+.claro .inputsugestao:focus {
+    border: 2px solid rgb(48, 138, 255);
+}
+
+.claro .inputsugestao:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.claro .name-music,
+.claro .name-artista-a {
+    color: rgb(10, 10, 10);
+}
+
+.claro .name-artista,
+.claro .nomeartista {
+    color: rgb(80, 80, 80);
+}
+
+.claro .artistas:hover,
+.claro .box-music:hover {
+    background-color: rgba(200, 200, 200, 0.473);
+}
+
+.claro .box-music:active {
+    background-color: rgba(180, 180, 180, 0.473);
+}
+
+.claro .h2-carro {
+    color: rgb(10, 10, 10);
+}
+
+.claro .play {
+    color: rgb(0, 0, 0);
+    background-color: rgb(48, 138, 255);
+    box-shadow: 0 4px 20px rgba(80, 80, 80, 0.404);
+}
+
+.claro .play:hover {
+    background-color: rgb(104, 160, 255);
+}
+
+.claro .boxplayer {
+    background-color: rgb(240, 240, 240);
+}
+
+.claro .closeplayer i,
+.claro .openplayer i {
+    color: rgb(10, 10, 10);
+}
+
+.claro .closeplayer:hover,
+.claro .openplayer:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+.claro .closeplayer:active,
+.claro .openplayer:active {
+    background-color: rgb(200, 200, 200);
+}
+
+.claro audio::-webkit-media-controls-panel {
+    background-color: rgb(103, 169, 255);
+}

@@ -1,3 +1,23 @@
+// mudar tema de acordo com o horário
+const toggleSwitch = document.getElementById('modeToggle');
+const body = document.querySelector('body');
+function horaTema() {
+    const hour = new Date().getHours();
+    if(hour >= 18 || hour < 6){
+        body.classList.remove('claro')
+    }
+    else{
+        body.classList.add('claro')
+    }
+}
+
+toggleSwitch.addEventListener('change', () => {
+    body.classList.toggle('claro');
+});
+
+horaTema();
+// mudar tema de acordo com o horário
+
 // menu principal
 function abrirMenuP() {
     var menu = document.querySelector('.box-menu');
@@ -49,18 +69,6 @@ function handleMouseMove(e) {
 function scrollToSection() {
     document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
 }
-
-
-// Tema claro
-function mudarTema() {
-    document.body.classList.toggle('claro'); // Alterna a classe 'claro' no body
-    const btn = document.querySelector('.mudar-tema'); // Seleciona o botão pelo seletor
-    if (btn) {
-        btn.classList.toggle('ativo'); // Alterna uma classe opcional para o botão, se necessário
-    }
-}
-// Tema claro
-
 
 //menu configurações
 function abrirMenuconf() {
