@@ -1,6 +1,6 @@
 /* Modo Claro */
 body.claro {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
     color: rgb(10, 10, 10);
 }
 
@@ -9,7 +9,7 @@ body.claro {
 } 
 
 .claro .headerp {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
 }
 
 .claro .search-box>i {
@@ -153,7 +153,7 @@ body.claro {
 }
 
 .claro .boxplayer {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
 }
 
 .claro .closeplayer i,

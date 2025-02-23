@@ -6,15 +6,10 @@
 }
 
 html,
-body {
-    background-color: rgb(0, 0, 0);
-    transition: background-color 0.3s ease;
-}
-
-.box-btntema{
-    display: flex;
-    justify-content: right;
-    padding-top: 30px;
+body.claro {
+    background-color: rgb(255, 255, 255);
+    /* Cor de fundo clara */
+    overflow-x: hidden;
 }
 
 /* From Uiverse.io by shadowfax29 */
@@ -25,8 +20,7 @@ body {
     display: inline-block;
     width: 3.5em;
     height: 2em;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-top: 10px;
 }
 
 /* Hide default HTML checkbox */
@@ -78,6 +72,7 @@ body {
 }
 
 
+
 .s1 {
     display: flex;
     justify-content: center;
@@ -86,63 +81,64 @@ body {
     margin-bottom: 400px;
 }
 
-.h21 {
-    color: white;
+.claro .h21 {
+    color: black;
+    /* Cor do texto em tema claro */
     font-size: 30px;
     margin-bottom: 10px;
 }
 
-.box-text {
+.claro .box-text {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(240, 240, 240);
+    /* Fundo da caixa em tema claro */
     border-radius: 5px;
     border: 1px solid rgb(109, 109, 109);
     padding: 50px;
     width: 600px;
-    height: 500px;
-    transition: background-color 0.3s ease;
 }
 
-
-form {
+.claro form {
     margin-left: 50px;
     flex-direction: column;
     width: 450px;
     padding: 30px;
 }
 
-input {
+.claro input {
     width: 400px;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 30px;
     outline: none;
-    background-color: rgba(25, 25, 25);
-    border: none;
-    border: 1px solid rgb(49, 49, 49);
-    color: white;
+    background-color: rgba(240, 240, 240, 0.8);
+    /* Fundo dos inputs em tema claro */
+    border: 2px solid rgb(200, 200, 200);
+    /* Borda dos inputs em tema claro */
+    color: black;
+    /* Texto em inputs no tema claro */
     font-size: 16px;
     padding-left: 20px;
-    transition: background-color 0.3s ease;
 }
 
-.l1 {
+.claro .l1 {
     display: block;
-    color: #ffffff;
+    color: black;
+    /* Cor da label em tema claro */
     margin-left: 8px;
     margin-bottom: 10px;
 }
 
-input:hover {
-    background-color: rgb(36, 36, 36);
+.claro input:hover {
+    background-color: rgba(220, 220, 220, 0.8);
     transition: 0.3s ease;
 }
 
-input:focus {
-    border: 1px solid rgb(48, 138, 255);
+.claro input:focus {
+    border: 2px solid rgb(48, 138, 255);
     transition: 0.3s ease;
 }
 
@@ -156,19 +152,18 @@ hr {
     border-radius: 30px;
 }
 
-button {
+.claro button {
     background-color: rgb(48, 138, 255);
     width: 400px;
     padding: 15px;
     border: none;
     border-radius: 25px;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 15px;
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: bold;
     transition: 0.3s ease;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -176,20 +171,20 @@ button:hover {
     transition: 0.3s ease;
 }
 
-button:active {
+button :active {
     transform: scale(0.95);
 }
 
-.l2 {
+.claro .l2 {
     font-size: 14px;
-    color: #616161;
+    color: black;
     margin-right: 2px;
     margin-left: 8px
 }
 
-a {
-    color: #616161;
-    font-size: 14px;
+.claro a {
+    color: black;
+    font-size: 14px
 }
 
 #a1 {
@@ -198,44 +193,25 @@ a {
 
 a:hover {
     color: rgb(81, 156, 255);
-    transition: 0.3s ease
+    transition: .3s ease
 }
 
-footer {
-    background-color: #0f0f0f;
+.claro footer {
+    background-color: #f7f7f7;
+    /* Cor de fundo do footer em tema claro */
     height: 80px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
+    align-items: center
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    background-color: #7a7a7a;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(77, 124, 255, 0.8);
-    border-radius: 20px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(110, 149, 255);
-}
-
-::-webkit-scrollbar-thumb:active {
-    background-color: rgb(146, 175, 255);
-}
-
+/* Media Queries */
 /* Celulares*/
-@media (max-width: 600px) {}
+@media (max-width :600px) {}
 
 /* Tablets*/
-@media (min-width: 601px) and (max-width: 900px) {}
+@media (min-width :601px) and (max-width :900px) {}
 
 /* Desktops*/
-@media (min-width: 901px) {}
+@media (min-width :901px) {}

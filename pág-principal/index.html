@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mudarTema.css">
+    <link rel="stylesheet" href="/pág-principal/TemaClaro.css">
     <link rel="shortcut icon" type="image/x-icon" href="/imagens/logob.png">
     <link rel="preconnect" href="https://fonts.gyoogleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,27 +25,27 @@
         <div class="search-box">
             <i class="fas fa-search"></i>
             <div>
-                <input type="text" class="pes" id="Pesquisar" placeholder="Que musica queres ouvir?"
-                    oninput="pesquisar()">
-            </div>
+                <input type="text" class="pes" id="Pesquisar" placeholder="Que musica queres ouvir?" oninput="pesquisar()">
+           </div>
         </div>
 
         <div class="botõesright">
             <label id="modeToggle" class="switch">
-                <input type="checkbox">
+                <input type="checkbox" id="checkbox">
                 <span class="slider"></span>
             </label>
 
             <button title="Menu" onclick="abrirMenuP()" class="box-icone-m">
                 <i id="icone-menu" class="fa-solid fa-bars"></i>
             </button>
+            
         </div>
     </header>
 
     <div class="box-menu">
-        <button class="button-menu"><i id="icone-inicio" class="fa-solid fa-house"></i>Inicio</button>
-        <button class="button-menu"> <i id="icone-perfil" class="fa-solid fa-user"></i>Perfil</button>
-        <button class="button-menu"><i id="icone-bibli" class="fa-solid fa-book-open"></i>Biblioteca</button>
+        <a href="#"><button class="button-menu"><i id="icone-inicio" class="fa-solid fa-house"></i>Inicio</button></a>
+        <a href="/form-login/index.html"><button class="button-menu"><i id="icone-login" class="fa-solid fa-right-to-bracket"></i></i>Entrar</button></a>
+        <a href="#"><button class="button-menu"><i id="icone-bibli" class="fa-solid fa-book-open"></i>Biblioteca</button></a>
     </div>
 
     <div class="containercont">
@@ -640,8 +640,7 @@
 
             </div>
 
-
-            <script src="script.js"></script>
+            <script src="/pág-principal/script.js"></script>
 
 </body>
 

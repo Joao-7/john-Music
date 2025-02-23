@@ -11,13 +11,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="/form-login/TemaClaro.css">
     <title>Iniciar Seção</title>
 </head>
 
 <body>
 
+    <header class="box-btntema">
+        <label id="modeToggle" class="switch">
+            <input type="checkbox" id="checkbox">
+            <span class="slider"></span>
+        </label>
+    </header>
+
     <section class="s1">
-        <form action="/pág-principal/principal.html">
+        <form action="/pág-principal/index.html">
             <img class="logo" src="/imagens/logob.png" alt="">
             <h2 class="h21">Faça login no JohnMusic para ouvir o que há de melhor</h2>
             <input type="email" id="email" name="email" placeholder="email" required>
@@ -25,7 +33,7 @@
             <button>Login</button>
             <div>
                 <label for="a1">Não tem uma conta?</label>
-                <a id="a1" href="/form-cadastro/cadastro.html">cadastre-se</a>
+                <a id="a1" href="/form-cadastro/index.html">cadastre-se</a>
             </div>
         </form>
     </section>
@@ -35,6 +43,7 @@
         <a class="a2" id="a2" href="termos.html">Termos e Condições</a>
     </footer>
 
+    <script src="/form-login/script.js"></script>
 
 </body>
 

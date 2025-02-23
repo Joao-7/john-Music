@@ -1,13 +1,16 @@
-// mudar tema de acordo com o horário
+// alternar tema 
 const toggleSwitch = document.getElementById('modeToggle');
-const body = document.querySelector('body');
+const checkbox = document.getElementById('checkbox');
+const body = document.body;
 function horaTema() {
     const hour = new Date().getHours();
     if(hour >= 18 || hour < 6){
         body.classList.remove('claro')
+        checkbox.checked = true;
     }
     else{
         body.classList.add('claro')
+        checkbox.checked = false;
     }
 }
 
@@ -16,7 +19,7 @@ toggleSwitch.addEventListener('change', () => {
 });
 
 horaTema();
-// mudar tema de acordo com o horário
+// alternar tema 
 
 // menu principal
 function abrirMenuP() {

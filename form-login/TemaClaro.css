@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2";
+}
+
+html,
+body.claro {
+    background-color: rgb(255, 255, 255);
+    /* Fundo para tema claro */
+}
+
+.claro .h21 {
+    color: rgb(54, 54, 54);
+}
+
+.claro input {
+    background-color: rgb(230, 230, 230);
+    /* Fundo para tema claro */
+    color: black;
+    /* Texto para tema claro */
+    border: 2px solid rgb(201, 201, 201);
+}
+
+.claro input:hover {
+    background-color: rgb(36, 36, 36);
+    /* Fundo ao passar o mouse no tema escuro */
+    transition: 0.3s ease;
+}
+
+.claro input:hover {
+    background-color: rgb(220, 220, 220);
+    /* Fundo ao passar o mouse no tema claro */
+}
+
+.claro input:focus {
+    border: 2px solid rgb(48, 138, 255);
+    /* Borda ao focar no input */
+}
+
+.claro button {
+    background-color: rgb(48, 138, 255);
+    /* Fundo do botão no tema escuro */
+    width: 400px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    /* Texto do botão no tema escuro */
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.claro button {
+    background-color: rgb(48, 138, 255);
+    /* Fundo do botão no tema claro (mantido) */
+}
+
+
+.claro label {
+    color: #333333;
+    /* Texto para tema claro */
+}
+
+.claro a {
+    color: #333333;
+    /* Links para tema claro */
+}
+
+a:hover {
+    color: rgb(81, 156, 255);
+}
+
+.claro footer {
+    background-color: #eeeeee;
+    /* Fundo do footer no tema escuro */
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
