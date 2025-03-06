@@ -4,9 +4,17 @@ body.claro {
     color: rgb(10, 10, 10);
 }
 
+.claro .links {
+    color: rgb(112, 112, 112);
+}
+
+.claro .links:hover {
+    color: rgb(48, 138, 255);
+}
+
 .claro input::-webkit-input-placeholder {
-    color: rgb(44, 44, 44) !important; 
-} 
+    color: rgb(44, 44, 44) !important;
+}
 
 .claro .headerp {
     background-color: rgb(255, 255, 255);
@@ -80,7 +88,7 @@ body.claro {
 }
 
 .claro .link-bibli {
-    color: rgb(10, 10, 10);
+    color: rgb(51, 51, 51);
 }
 
 .claro .link-bibli:hover {

@@ -2,6 +2,7 @@
 const toggleSwitch = document.getElementById('modeToggle');
 const checkbox = document.getElementById('checkbox');
 const body = document.body;
+
 function horaTema() {
     const hour = new Date().getHours();
     if(hour >= 18 || hour < 6){
